@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sobre Yuler Quispe Ccente</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body {
+      background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .profile-card {
+      max-width: 700px;
+      margin: 50px auto;
+      background-color: white;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      padding: 30px;
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 1s ease;
+    }
+
+    .profile-card.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .profile-image {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid #ffc107;
+      margin-bottom: 20px;
+    }
+
+    .btn-back {
+      margin-top: 30px;
+    }
+
+    h1, h3 {
+      color: #343a40;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="profile-card text-center" id="profileCard">
+      <!-- Imagen opcional, cámbiala si tienes una foto -->
+      <img src="data:image/jpeg;base64,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" alt="Foto de Yuler" class="profile-image">
+      <h1>Yuler Quispe Ccente</h1>
+      <p><strong>Edad:</strong> 25 años</p>
+      <p><strong>Vivo en:</strong> Lima, Perú</p>
+      <p><strong>Natural de:</strong> Ayacucho</p>
+      <hr />
+      <h3>¿A qué me dedico?</h3>
+      <p>
+        Soy desarrollador de software con experiencia en tecnologías como <strong>C#,Java, ASP.NET Core, Angular y SQL Server</strong>. Me enfoco en crear aplicaciones web modernas, integrando APIs, bases de datos y diseño atractivo para brindar soluciones eficientes.
+      </p>
+      <p>
+        Me apasiona aprender y mejorar constantemente, desarrollando tanto el lado lógico (backend) como visual (frontend) de los sistemas. También manejo <strong>Bootstrap, JavaScript, Oracle</strong> y consumo de servicios REST.
+      </p>
+      <a href="perfil.html" class="btn btn-warning btn-back">⬅ Volver al inicio</a>
+    </div>
+  </div>
+
+  <script>
+    window.addEventListener("load", () => {
+      const card = document.getElementById("profileCard");
+      card.classList.add("show");
+    });
+  </script>
+</body>
+</html>
